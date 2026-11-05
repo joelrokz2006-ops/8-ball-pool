@@ -1,0 +1,233 @@
+.aim-controls-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 24px;
+  z-index: 20;
+}
+
+.aim-controls-overlay * {
+  pointer-events: auto;
+}
+
+/* Left side controls: Fine Aim, Spin, Chalk */
+.aim-left-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aim-tools-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spin-trigger-btn, .chalk-trigger-btn {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.chalk-trigger-btn.chalked {
+  border-color: #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+  color: #93c5fd;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.35);
+}
+
+.chalk-trigger-btn:hover:not(:disabled) {
+  background: var(--color-panel-raised);
+  border-color: #60a5fa;
+  color: #93c5fd;
+}
+
+.spin-trigger-btn:hover:not(:disabled) {
+  background: var(--color-panel-raised);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.spin-mini-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.spin-mini-dot {
+  width: 5px;
+  height: 5px;
+  background: #dc2626;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.fine-aim-bar {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.fine-btn {
+  background: var(--color-panel-raised);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.fine-btn:hover:not(:disabled) {
+  background: rgba(217, 181, 109, 0.2);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.fine-degrees-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 58px;
+}
+
+.fine-degrees-val {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.fine-label {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Right side power meter and pull-back stick */
+.aim-right-cluster {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.power-meter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.power-track-wrapper {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: 20px;
+  width: 44px;
+  height: 180px;
+  padding: 4px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.power-track-fill {
+  width: 100%;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  border-radius: 16px;
+  background: linear-gradient(to top, #70d6a1 0%, #d9b56d 50%, #e86b65 100%);
+  transition: height 50ms linear;
+}
+
+.power-track-thumb {
+  width: 38px;
+  height: 18px;
+  background: #ffffff;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  position: absolute;
+  left: 2px;
+  transform: translateY(50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.power-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.shoot-action-btn {
+  background: linear-gradient(135deg, #d9b56d 0%, #b89146 100%);
+  color: #0b1110;
+  border-radius: var(--radius-md);
+  padding: 16px 28px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(217, 181, 109, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.shoot-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(217, 181, 109, 0.5);
+  background: linear-gradient(135deg, #edd08e 0%, #c9a356 100%);
+}
+
+.shoot-action-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 640px) {
+  .aim-controls-overlay {
+    padding: 0 12px;
+    bottom: 12px;
+  }
+  .power-track-wrapper {
+    height: 140px;
+    width: 38px;
+  }
+  .shoot-action-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}

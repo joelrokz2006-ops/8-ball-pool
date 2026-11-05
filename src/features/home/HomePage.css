@@ -1,0 +1,290 @@
+.home-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 20%, #152720 0%, #0b1110 75%);
+  position: relative;
+}
+
+/* Top App Header */
+.home-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: linear-gradient(to bottom, rgba(11, 17, 16, 0.95) 0%, rgba(11, 17, 16, 0.4) 80%, transparent 100%);
+  z-index: 10;
+}
+
+.home-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-mini-ball {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #111827;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 12px rgba(217, 181, 109, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-mini-ball-inner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: 1px;
+}
+
+.home-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-player-chip {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-full);
+  padding: 6px 16px 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.home-player-chip:hover {
+  background: var(--color-panel-raised);
+  border-color: var(--color-accent);
+}
+
+.home-player-avatar-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.home-player-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-player-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.home-player-level {
+  font-size: 0.72rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.home-coins-badge {
+  background: rgba(217, 181, 109, 0.12);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Hero Center Content */
+.home-hero-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px 100px 20px;
+}
+
+.home-hero-title-box {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.home-hero-tag {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.home-hero-heading {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.home-hero-desc {
+  font-size: 1rem;
+  color: var(--color-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Play Hero Button */
+.home-big-play-btn {
+  background: linear-gradient(135deg, #d9b56d 0%, #b89146 100%);
+  color: #0b1110;
+  border-radius: var(--radius-lg);
+  padding: 20px 48px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 30px rgba(217, 181, 109, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--transition-normal);
+  margin-bottom: 36px;
+}
+
+.home-big-play-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(217, 181, 109, 0.6);
+  background: linear-gradient(135deg, #edd08e 0%, #c9a356 100%);
+}
+
+/* Mode Quick Cards Grid */
+.home-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.home-mode-card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.home-mode-card:hover {
+  background: var(--color-panel-raised);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.home-mode-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(217, 181, 109, 0.1);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-mode-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.home-mode-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* Bottom Navigation Bar */
+.home-bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(18, 28, 25, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 16px;
+  z-index: 20;
+}
+
+.home-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.home-nav-item:hover, .home-nav-item.active {
+  color: var(--color-accent);
+  background: rgba(217, 181, 109, 0.1);
+}
+
+@media (max-width: 640px) {
+  .home-top-header {
+    padding: 12px 16px;
+  }
+  .home-hero-heading {
+    font-size: 2rem;
+  }
+  .home-big-play-btn {
+    padding: 16px 36px;
+    font-size: 1.2rem;
+  }
+  .home-modes-grid {
+    grid-template-columns: 1fr;
+  }
+}

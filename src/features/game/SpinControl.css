@@ -1,0 +1,123 @@
+.spin-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.spin-card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-popup);
+}
+
+.spin-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.spin-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.spin-close-btn {
+  color: var(--color-muted);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spin-close-btn:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.spin-cue-ball {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #dedede 60%, #b8b8b8 100%);
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.8),
+              0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  cursor: crosshair;
+  touch-action: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.spin-crosshair-h, .spin-crosshair-v {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.spin-crosshair-h {
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+}
+
+.spin-crosshair-v {
+  left: 50%;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+}
+
+.spin-contact-dot {
+  width: 18px;
+  height: 18px;
+  background: #dc2626;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.spin-info {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.spin-reset-btn {
+  margin-top: 16px;
+  background: var(--color-panel-raised);
+  border: 1px solid var(--color-panel-border);
+  color: var(--color-accent);
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.spin-reset-btn:hover {
+  background: rgba(217, 181, 109, 0.15);
+  border-color: var(--color-accent);
+}

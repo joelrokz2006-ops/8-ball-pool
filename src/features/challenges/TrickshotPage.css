@@ -1,0 +1,149 @@
+.trickshot-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 20%, #152720 0%, #0b1110 75%);
+  overflow-y: auto;
+}
+
+.trickshot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trickshot-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.trickshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.trickshot-card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.trickshot-card:hover {
+  background: var(--color-panel-raised);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.trickshot-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.trickshot-diff-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trickshot-diff-badge.Easy {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.trickshot-diff-badge.Medium {
+  background: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.trickshot-diff-badge.Hard, .trickshot-diff-badge.Expert, .trickshot-diff-badge.Master {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.trickshot-stars-row {
+  display: flex;
+  gap: 4px;
+  color: var(--color-accent);
+}
+
+.trickshot-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.trickshot-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.trickshot-hint-box {
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 3px solid var(--color-accent);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.trickshot-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 14px;
+}
+
+.trickshot-reward {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.trickshot-start-btn {
+  background: linear-gradient(135deg, #d9b56d 0%, #b89146 100%);
+  color: #0b1110;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.trickshot-start-btn:hover {
+  background: linear-gradient(135deg, #edd08e 0%, #c9a356 100%);
+  transform: translateY(-1px);
+}
